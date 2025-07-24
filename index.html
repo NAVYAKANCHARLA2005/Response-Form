@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Productivity Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Smart Productivity Dashboard</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Contact</a>
+    <a href="#">Tasks</a>
+    <a href="#">Gallery</a>
+  </nav>
+
+  <div class="dashboard">
+    <!-- Contact Form -->
+    <section>
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label for="name">Name *</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" required />
+
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <!-- To-Do List -->
+    <section>
+      <h2>To-Do List</h2>
+      <input type="text" id="taskInput" placeholder="Enter a task..." />
+      <button onclick="addTask()">Add Task</button>
+      <button onclick="clearTasks()">Clear All</button>
+      <ul id="taskList"></ul>
+    </section>
+
+    <!-- Image Gallery -->
+    <section class="gallery">
+      <h2>Image Gallery</h2>
+      <input type="text" id="imageURL" placeholder="Paste image URL..." />
+      <button onclick="addImage()">Add Image</button>
+      <div id="imageContainer"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
